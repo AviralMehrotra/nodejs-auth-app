@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main>
+        <form class="form" action="/login" method="post">
+            <p class="form-title">Login</p>
+            <div class="input-container">
+                <input placeholder="Enter email" type="email" autocomplete="email" name="email" value=<%=locals.email %>
+                >
+            </div>
+            <div class="input-container">
+                <input placeholder="Enter password" type="password" autocomplete="password" name="password"
+                    id="password">
+                <i class=" fa-solid fa-eye" id="eye"></i>
+            </div>
+            <p class="error">
+                <%= locals.message %>
+            </p>
+            <button type="submit" class="submit">Login</button>
+        </form>
+    </main>
+    <script src="script.js" async defer></script>
+</body>
+
+</html>
